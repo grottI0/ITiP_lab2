@@ -6,12 +6,6 @@ public class Point3d {
     private double yCoord;
     private double zCoord;
 
-    public static void main(String[] a) {
-        Point3d first = new Point3d(2, 2, 3);
-        Point3d second = new Point3d(1, 2, 3);
-        System.out.println(first.comparePoints(second));
-        System.out.println(first.distanceTo(second));
-    }
     public Point3d(double x, double y, double z) {
         xCoord = x;
         yCoord = y;
