@@ -1,21 +1,25 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+// класс описывающий точку в трехмерном пространстве
 public class Point3d {
     private double xCoord;
     private double yCoord;
     private double zCoord;
 
+    // конструктор
     public Point3d(double x, double y, double z) {
         xCoord = x;
         yCoord = y;
         zCoord = z;
     }
 
+    // конструктор по умолчанию
     public Point3d() {
         this(0.0,0.0,0.0);
     }
 
+    // возвращают одну из координат
     public double getX() {
         return xCoord;
     }
@@ -28,6 +32,7 @@ public class Point3d {
         return zCoord;
     }
 
+    // изменяют одну из координат
     public void setX(double x) {
         this.xCoord = x;
     }
@@ -40,7 +45,8 @@ public class Point3d {
         this.zCoord = z;
     }
 
-    public boolean comparePoints(Point3d other) {
+    // сравнивает две точки по их координатам
+    public boolean equals(Point3d other) {
         double firstX = this.getX();
         double firstY = this.getY();
         double firstZ = this.getZ();
@@ -52,6 +58,7 @@ public class Point3d {
                (Math.abs(firstZ - secondZ) < 0.00001);
     }
 
+    // возвращает расстояние между выбранными точками
     public double distanceTo(Point3d other) {
         BigDecimal bd = BigDecimal.valueOf(Math.sqrt(Math.pow(this.getX() - other.getX(), 2) +
                                            Math.pow(this.getY() - other.getY(), 2) +
