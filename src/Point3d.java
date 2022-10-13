@@ -53,9 +53,9 @@ public class Point3d {
         double secondX = other.getX();
         double secondY = other.getY();
         double secondZ = other.getZ();
-        return (Math.abs(firstX - secondX) < 0.00001) &&
-               (Math.abs(firstY - secondY) < 0.00001) &&
-               (Math.abs(firstZ - secondZ) < 0.00001);
+        return (firstX == secondX) &&
+               (firstY == secondY) &&
+               (firstZ == secondZ);
     }
 
     // возвращает расстояние между выбранными точками
