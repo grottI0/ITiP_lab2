@@ -7,9 +7,9 @@ public class Lab2 {
         Point3d third = new Point3d(Double.parseDouble(args[6]), Double.parseDouble(args[7]), Double.parseDouble(args[8]));
 
         if (first.equals(second) || first.equals(third) || second.equals(third)) {
-            System.out.println("Среди введенных точек есть одинаковые!");
+            System.out.println("Incorrect input!");
         } else {
-            System.out.println("Площадь равна " + computeArea(first, second, third));
+            System.out.println("Area = " + computeArea(first, second, third));
         }
     }
 
